@@ -9,6 +9,16 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
   {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['https://tceimports.com'], // Agrega tu dominio aquí
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization'],
+      keepHeaderOnError: true,
+    },
+  },
+  {
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
