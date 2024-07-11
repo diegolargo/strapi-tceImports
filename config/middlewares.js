@@ -4,7 +4,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://tceimports.com'], // Agrega tu dominio aquí
+      origin: ['https://tceimports.com', 'http://127.0.0.1:4321'], // Agrega tu dominio aquí
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       keepHeaderOnError: true,
